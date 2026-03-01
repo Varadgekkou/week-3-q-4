@@ -1,0 +1,16 @@
+name: Test Workflow
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Run a simple test with email 24f2004422@ds.study.iitm.ac.in
+        run: echo "Workflow is working correctly!"
